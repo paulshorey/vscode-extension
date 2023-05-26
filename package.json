@@ -2,14 +2,20 @@
   "name": "convertcode",
   "displayName": "ConvertCode",
   "description": "Converts selected code to a different format or syntax.",
-  "version": "0.0.1",
+  "version": "0.0.18",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulshorey/vscode-extension.git"
+  },
   "engines": {
     "vscode": "^1.78.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [

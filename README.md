@@ -1,22 +1,17 @@
 ## This extension contributes the following features:
 
+### Commands / Menus
+
 ```
-  "commands": [
-    {
-      "command": "convertcode.selectedToUpperCase",
-      "title": "cc UPPERCASE"
-    }
-  ],
-  "menus": {
-    "editor/context": [
-      {
-        "command": "convertcode.selectedToUpperCase",
-        "group": "1_modification",
-        "when": "editorHasSelection"
-      }
-    ]
+  {
+    "command": "convertcode.selectedToUpperCase",
+    "title": "cc UPPERCASE"
   }
 ```
+
+### Keyboard shortcuts
+
+- type `something={[` and it will autocomplete it as `something={[null,null,null,null,null]}` and move to its own line
 
 <br />
 
