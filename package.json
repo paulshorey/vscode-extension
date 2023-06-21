@@ -2,7 +2,7 @@
   "name": "convertcode",
   "displayName": "ConvertCode",
   "description": "Converts selected code to a different format or syntax.",
-  "version": "0.1.22",
+  "version": "0.1.24",
   "repository": {
     "type": "git",
     "url": "https://github.com/paulshorey/vscode-extension.git"
