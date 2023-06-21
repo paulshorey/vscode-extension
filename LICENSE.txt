@@ -1,7 +1,7 @@
 ## Open source 
 
-Most of this code I made in collaboration with ChatGPT anyway. So feel free to use and change however. 
+Most of this code I made in collaboration with ChatGPT anyway. So feel free to use and change however you want. 
 
-If this helps you at all, please do a quick shout out to me on your site blog or video [paulshorey.com](https://paulshorey.com) / [techy.tools](https://techy.tools) or at least come over and give one of my projects a star on [Github](https://github.com/paulshorey). 
+If this helps you at all, please shout out to me on your site blog or video [paulshorey.com](https://paulshorey.com) / [techy.tools](https://techy.tools) / [aiuikit.com](https://techy.tools). 🙏😭 At the very least, please come over and give one of my projects a star on [Github](https://github.com/paulshorey). 
 
 Thank you!

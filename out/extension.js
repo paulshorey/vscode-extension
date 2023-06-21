@@ -2,10 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deactivate = exports.activate = void 0;
 const vscode = require("vscode");
-console.log('Congratulations, your extension "convertcode" is now active!');
-function selectedToUpperCase(text) {
-    return text.toUpperCase();
-}
+const createReactComponent_1 = require("./createReactComponent");
 // The commandId parameter must match the command field in package.json
 function activate(context) {
     {
@@ -19,11 +16,15 @@ function activate(context) {
                 return;
             }
             const selectedText = editor.document.getText(editor.selection);
-            const transformedText = selectedToUpperCase(selectedText);
+            const transformedText = selectedText.toUpperCase();
             await editor.edit((editBuilder) => {
                 editBuilder.replace(editor.selection, transformedText);
             });
         });
+        context.subscriptions.push(disposable);
+    }
+    {
+        let disposable = vscode.commands.registerCommand('convertcode.createReactComponent', createReactComponent_1.default);
         context.subscriptions.push(disposable);
     }
     {

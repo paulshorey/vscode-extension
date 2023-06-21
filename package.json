@@ -2,7 +2,7 @@
   "name": "convertcode",
   "displayName": "ConvertCode",
   "description": "Converts selected code to a different format or syntax.",
-  "version": "0.0.18",
+  "version": "0.1.22",
   "repository": {
     "type": "git",
     "url": "https://github.com/paulshorey/vscode-extension.git"
@@ -16,16 +16,35 @@
   "activationEvents": [
     "*"
   ],
-  "main": "./out/extension.js",
+  "main": "./out/index.js",
   "contributes": {
     "commands": [
       {
+        "command": "convertcode.selected_sxToChakra",
+        "title": "SX -> Chakra"
+      },
+      {
         "command": "convertcode.selectedToUpperCase",
-        "title": "cc UPPERCASE"
+        "title": "UPPERCASE"
+      },
+      {
+        "command": "convertcode.createReactComponent",
+        "title": "Create React Component"
       }
     ],
     "menus": {
+      "explorer/context": [
+        {
+          "command": "convertcode.createReactComponent",
+          "group": "navigation"
+        }
+      ],
       "editor/context": [
+        {
+          "command": "convertcode.selected_sxToChakra",
+          "group": "1_modification",
+          "when": "editorHasSelection"
+        },
         {
           "command": "convertcode.selectedToUpperCase",
           "group": "1_modification",
@@ -40,7 +59,9 @@
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "package": "yarn run version:patch && \"yes\" | vsce package",
+    "version:patch": "npm version patch --no-git-tag-version"
   },
   "devDependencies": {
     "@types/vscode": "^1.78.0",
