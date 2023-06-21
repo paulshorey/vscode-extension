@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deactivate = exports.activate = void 0;
 const vscode = require("vscode");
-const code_autocomplete_chakra_1 = require("./mods/code_autocomplete_chakra");
 const explorer_create_reactComponent_1 = require("./mods/explorer_create_reactComponent");
 const code_selected_toUppercase_1 = require("./mods/code_selected_toUppercase");
 const code_selected_sxToChakra_1 = require("./mods/code_selected_sxToChakra");
@@ -33,7 +32,9 @@ function activate(context) {
         /*
          * autocomplete
          */
-        context.subscriptions.push(vscode.workspace.onDidChangeTextDocument(code_autocomplete_chakra_1.default));
+        // context.subscriptions.push(
+        //   vscode.workspace.onDidChangeTextDocument(code_autocomplete_chakra)
+        // );
     }
 }
 exports.activate = activate;
